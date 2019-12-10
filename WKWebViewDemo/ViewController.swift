@@ -2,16 +2,18 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController {
-
-    let targetUrl = "https://www.google.co.jp/"
-
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var reloadButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let urlRequest = URLRequest(url:URL(string:targetUrl)!)
+        guard let webView = webView,
+            let url = URL(string: "https://www.google.co.jp/") else {
+                return
+        }
+
+        let urlRequest = URLRequest(url: url)
         webView.load(urlRequest)
     }
 
