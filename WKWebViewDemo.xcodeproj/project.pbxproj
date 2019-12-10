@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		78B97E4A2257B608008FDB5B /* WKWebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97E492257B608008FDB5B /* WKWebViewDemoTests.swift */; };
 		78B97E552257B608008FDB5B /* WKWebViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97E542257B608008FDB5B /* WKWebViewDemoUITests.swift */; };
 		78B97E642257B88A008FDB5B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B97E632257B88A008FDB5B /* WebKit.framework */; };
+		78E53C3E239FEBE30098641D /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 78E53C3D239FEBE30098641D /* Swifter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E53C3E239FEBE30098641D /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +196,9 @@
 				78B97E522257B608008FDB5B /* PBXTargetDependency */,
 			);
 			name = WKWebViewDemoUITests;
+			packageProductDependencies = (
+				78E53C3D239FEBE30098641D /* Swifter */,
+			);
 			productName = WKWebViewDemoUITests;
 			productReference = 78B97E502257B608008FDB5B /* WKWebViewDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 78B97E282257B608008FDB5B;
+			packageReferences = (
+				78E53C3C239FEBE30098641D /* XCRemoteSwiftPackageReference "swifter" */,
+			);
 			productRefGroup = 78B97E322257B608008FDB5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78E53C3C239FEBE30098641D /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78E53C3D239FEBE30098641D /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E53C3C239FEBE30098641D /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78B97E292257B608008FDB5B /* Project object */;
 }
