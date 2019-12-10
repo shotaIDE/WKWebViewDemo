@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  WKWebViewDemo
-//
-//  Created by Shota Ide on 2019/04/06.
-//  Copyright © 2019 Shota Ide. All rights reserved.
-//
-
 import UIKit
 import WebKit
 
