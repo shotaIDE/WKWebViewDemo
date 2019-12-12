@@ -16,31 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Od-QK-wx5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Od-QK-wx5">
+                                <rect key="frame" x="0.0" y="76" width="414" height="786"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQL-ae-2hd">
+                                <rect key="frame" x="0.0" y="44" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="URL Input Field"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="urlFieldShouldReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="nta-1U-SuQ"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Od-QK-wx5" secondAttribute="trailing" id="PNJ-Ns-4Aj"/>
-                            <constraint firstItem="8Od-QK-wx5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="acx-Sg-kMJ"/>
-                            <constraint firstItem="8Od-QK-wx5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dZp-g7-ulh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Od-QK-wx5" secondAttribute="bottom" id="tSp-HL-7aE"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="urlField" destination="BQL-ae-2hd" id="UnM-ZG-K68"/>
                         <outlet property="webView" destination="8Od-QK-wx5" id="ChL-0J-r8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="86"/>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
     </scenes>
 </document>

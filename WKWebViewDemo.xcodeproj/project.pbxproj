@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7811390423A137CB008536C3 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 7811390323A137CB008536C3 /* Swifter */; };
 		78B97E352257B608008FDB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97E342257B608008FDB5B /* AppDelegate.swift */; };
 		78B97E372257B608008FDB5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97E362257B608008FDB5B /* ViewController.swift */; };
 		78B97E3A2257B608008FDB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B97E382257B608008FDB5B /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B97E642257B88A008FDB5B /* WebKit.framework in Frameworks */,
+				7811390423A137CB008536C3 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,9 @@
 			dependencies = (
 			);
 			name = WKWebViewDemo;
+			packageProductDependencies = (
+				7811390323A137CB008536C3 /* Swifter */,
+			);
 			productName = WKWebViewDemo;
 			productReference = 78B97E312257B608008FDB5B /* WKWebViewDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -445,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C4Q857LHAF;
 				INFOPLIST_FILE = WKWebViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -452,10 +458,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shota.ide.WKWebViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -475,6 +483,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -532,11 +541,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shota.ide.WKWebViewDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WKWebViewDemo;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -557,6 +568,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WKWebViewDemo;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Release;
 		};
