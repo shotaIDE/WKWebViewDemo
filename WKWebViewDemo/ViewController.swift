@@ -3,7 +3,6 @@ import WebKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
-    @IBOutlet weak var reloadButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +14,6 @@ class ViewController: UIViewController {
 
         let urlRequest = URLRequest(url: url)
         webView.load(urlRequest)
-    }
-
-    @IBAction func reload(_ sender: Any) {
-        webView.reload()
     }
 }
 
