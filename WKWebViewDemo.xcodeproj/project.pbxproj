@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7811390423A137CB008536C3 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 7811390323A137CB008536C3 /* Swifter */; };
 		78B97E352257B608008FDB5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97E342257B608008FDB5B /* AppDelegate.swift */; };
 		78B97E372257B608008FDB5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B97E362257B608008FDB5B /* ViewController.swift */; };
 		78B97E3A2257B608008FDB5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B97E382257B608008FDB5B /* Main.storyboard */; };
@@ -59,7 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B97E642257B88A008FDB5B /* WebKit.framework in Frameworks */,
-				7811390423A137CB008536C3 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +156,6 @@
 			);
 			name = WKWebViewDemo;
 			packageProductDependencies = (
-				7811390323A137CB008536C3 /* Swifter */,
 			);
 			productName = WKWebViewDemo;
 			productReference = 78B97E312257B608008FDB5B /* WKWebViewDemo.app */;
@@ -391,10 +388,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};
@@ -450,6 +447,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};
@@ -466,12 +464,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shota.ide.WKWebViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
 		};
@@ -491,7 +488,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
 		};
