@@ -1,0 +1,44 @@
+name: WKWebViewDemo
+configs:
+  Debug: debug
+  Release: release
+
+packages:
+  Swifter:
+    url: https://github.com/httpswift/swifter.git
+    from: 1.4.7
+
+targets:
+  WKWebViewDemo:
+    type: application
+    platform: iOS
+    sources: WKWebViewDemo
+    dependencies:
+      - sdk: WebKit.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shota.ide.WKWebViewDemo
+  WKWebViewDemoTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: WKWebViewDemoTests
+    dependencies:
+      - target: WKWebViewDemo
+  WKWebViewDemoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: WKWebViewDemoUITests
+    dependencies:
+      - target: WKWebViewDemo
+      - package: Swifter
+
+schemes:
+  WKWebViewDemo:
+    build:
+      targets:
+        WKWebViewDemo: all
+    test:
+      config: Debug
+      targets: 
+        - name: WKWebViewDemoTests
+        - name: WKWebViewDemoUITests
